@@ -11,6 +11,7 @@ package jjcdeno82bim;
  */
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import static java.time.Clock.system;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
@@ -59,6 +60,12 @@ public class Jjcdeno82bim {
 
             System.out.println("Tienes " + anyResultado + " años" + ", " + mesResultado
                     + " meses " + " y " + diaResultado + " dias");
+            if(anyo>=18){
+                System.out.println("eres mayor de edad puedes pasar");
+            }else{
+                system.out.println("eres menor de edad vete a tu casa");
+            }
+            
         } catch (Exception ex) {
             System.out.println("Ha habido un error en el calculo realizado" + ex.toString());
         }
